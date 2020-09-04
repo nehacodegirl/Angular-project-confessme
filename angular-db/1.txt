@@ -1,0 +1,93 @@
+select * from userdetails;
+select * from userdetails;
+desc confession;
+show databases;
+use  confessme;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Neha@1234'; 
+flush privileges;
+
+desc userdetails;
+
+drop  table userdetails;
+drop table confession;
+
+create table userdetails(
+username varchar(30) not null,
+emailid varchar(30) unique not null,
+password varchar(30) primary key,
+cpassword varchar(30) not null
+);
+
+
+create table confession(
+
+password varchar(30),
+category varchar(30),
+thoughts varchar(1000),
+foreign key (password) references userdetails( password)
+on delete cascade on update cascade
+);
+
+select * from userdetails;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Neha@1234';
+
+create table details(
+name varchar(20) primary key,
+surname varchar(20)
+
+);
+select * from details;
+update details set surname="rambhad" where name="neha";
+
+
+
+
+create table userdetails(
+username varchar(30) primary key ,
+emailid varchar(30) unique not null,
+password varchar(30) not null ,
+cpassword varchar(30) not null,
+category varchar(30),
+thoughts varchar(1000)
+);
+
+create table store(
+username varchar(30) not null,
+category varchar(30) not null,
+thoughts varchar(1000) not null,
+foreign key (username) references userdetails(username)
+on update cascade on delete cascade
+);
+desc userdetails;
+desc store;
+select * from userdetails;
+select *  from store;
+
+drop table userdetails;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Neha@1234';
+
+select * from userdetails;
+
+/*--------   Extra            ----------*/
+drop table details;
+select * from details;
+
+create table details(
+ id int(10)  primary key auto_increment,
+name varchar(20) ,
+surname varchar(20),
+
+constraint foreign key(id) references interest(id)
+);
+create table interest(
+pid int(10) primary key auto_increment,
+id int(10),
+hobby varchar(20)
+
+);
+drop table interest;
+select * from details;
+desc details;
+insert into details(name,surname) values ("Neha","Rambhad");
+/****----------------finish__________*/
+

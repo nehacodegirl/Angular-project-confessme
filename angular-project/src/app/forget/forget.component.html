@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5 align-item-center " 
+    style="height:400px; ">
+        
+                
+
+                <div class="col-5 col-md-3  d-flex flex-column justify-content-center" [formGroup]="fbFormGroup"
+                 style="margin-top: 100px; border-radius:20px; background-color: rgb(155, 237, 240)">
+                
+                 <div class="alert alert-sm  alert-danger" role="alert"
+                 style="font-size: 10px;" *ngIf="uiInvalidCredential">
+                  please check username or password.
+                </div>
+                
+                <div class="input-group mb-4 input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <img src="https://img.icons8.com/color/20/000000/gender-neutral-user.png"/>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control fix-rounded-right" placeholder="Email-Id" formControlName="emailid" required>
+                    <div class="invalid-feedback">
+                      Please Enter Your Email-Id.
+                    </div>
+                  </div>
+
+                  <div class="input-group mb-4 input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <img src="https://img.icons8.com/color/20/000000/password1--v1.png"/>
+                      </span>
+                    </div>
+                    <input type="password" class="form-control fix-rounded-right"  placeholder=" New Password" formControlName="password" required>
+                    <div class="invalid-feedback">
+                      Please Enter new password.
+                    </div>
+                  </div>
+
+
+                  <div class="input-group mb-4 input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <img src="https://img.icons8.com/color/20/000000/password1--v1.png"/>
+                      </span>
+                    </div>
+                    <input type="password" class="form-control fix-rounded-right"  placeholder=" Confirm Password" formControlName="cpassword" required>
+                    <div class="invalid-feedback">
+                      Please enter valid password.
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-sm btn-primary mb-4"
+                  
+        (click)="submitHere()">Submit Here</button>
+
+</div>
+            
+</div>
+
+    
+    <router-outlet></router-outlet>
+</div>

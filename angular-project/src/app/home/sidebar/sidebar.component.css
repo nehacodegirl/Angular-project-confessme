@@ -1,0 +1,23 @@
+.menu1{
+    height:40px;
+    color:black; font-size: 25px;
+    display:flex;
+    margin-bottom: 15px;
+    font-weight:bold;
+    margin:20px;
+    
+}
+
+.menu2{
+    height:40px;
+    color:white; font-size: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+.menu2  bg-success:hover{
+background-color:pink;
+cursor: pointer;
+};

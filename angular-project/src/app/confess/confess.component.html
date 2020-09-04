@@ -1,0 +1,57 @@
+
+
+<div class="container-fluid">
+    <div class="row flex-column justify-content-center align-items-center">
+        <div class="col-12 col-md-6 mt-5 p-3" [formGroup]="fbFormGroup"
+        style="background-color: rgb(155, 237, 240);
+        border-radius:10px;
+        ">
+
+
+            <div class="alert alert-sm  alert-danger" role="alert"
+            style="font-size: 10px;" *ngIf="uiInvalidCredential">
+             please check username.
+           </div>
+
+
+
+            
+                <label>Username</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username"
+                formControlName="username" required>
+                <small id="emailHelp" class="form-text text-dark "  >We'll never share your email with anyone else.</small>
+              
+
+
+
+            <label for="Confession">Category</label>
+            <select class="form-control form-control-lg mb-3" formControlName="category" required>
+                <option >I am interested in</option>
+                <option>Dream</option>
+                <option>First Experience</option>
+                <option>Guilt</option>
+                <option>Lie</option>
+                <option>Pain</option>
+                <option>A Random feeling</option>
+                <option>Truth</option>
+                <option>Wild Experience</option>
+                <option>Other</option>
+                
+              </select>
+<label for="Confession">Confession</label>
+    <textarea name="" id="" cols="75" rows="8" placeholder="Confession" style="border-radius:5px; font-weight:bold" formControlName="thoughts" required>
+
+    </textarea>
+
+              
+
+    
+     <div class="d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-secondary bt-sm  text-light p-2 text-bold mb-3" (click)="confesshere()">Confess</button>
+
+     </div>
+    
+    </div>
+
+    </div>
+</div>

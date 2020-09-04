@@ -1,0 +1,13 @@
+label{
+    font-size:22px;
+    color:black;
+    font-weight:bold;
+}
+
+textarea{
+    color:darkblue;
+    font-weight: bold;
+    font-family:cursive;
+    margin-bottom: 10px;
+
+}

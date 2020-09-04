@@ -1,0 +1,10 @@
+body{
+    background-image:url("/assets/2.jpg");
+    
+    background-position:absolute;
+    background-size: cover;
+    height: 100vh;
+    margin:0px;
+    padding: 0px;
+
+}

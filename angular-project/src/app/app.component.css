@@ -1,0 +1,11 @@
+.container-fluid{
+    background-image:url("https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-520-romantic-confession-background-material-image_220664.jpg");
+    
+    background-position:absolute;
+    background-size: cover;
+    overflow-x: hidden;
+    height: 100vh;
+    margin:0px;
+    padding: 0px;
+
+}
